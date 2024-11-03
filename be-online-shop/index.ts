@@ -1,12 +1,13 @@
-const express = require("express");
+import { log } from "console";
+import express, { Request, Response } from "express";
 
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello BE");
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hallo Project Express");
 });
 
 app.listen(port, () => {
-  console.log("Server Berjalan di port 3000");
+  console.log(`Server Berjalan Di http://localhost:${port}`);
 });
